@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  justify-api:
+    build: .
+    ports:
+      - '5001:5001'
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    depends_on:
+      - redis
+    networks:
+      - internal_network
+
+  redis:
+    image: 'redis'
+    ports:
+      - '6379:6379'
+    networks:
+      - internal_network
+
+networks:
+  internal_network:
