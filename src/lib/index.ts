@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 import { setupDIContainer, container } from '../config/di.config';
-import { IController } from '../interfaces/controllers';
+import { IController } from './interfaces/controllers';
 import App from './app';
 import DBClient from '../config/db.config';
 

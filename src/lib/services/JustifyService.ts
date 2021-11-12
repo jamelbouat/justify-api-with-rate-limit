@@ -1,4 +1,6 @@
 
+const FINAL_LINE_LENGTH = 80;
+
 class JustifyService {
 
     // Split the text into words, then concatenate the words (separator equal to space) to have lines equal or
@@ -22,12 +24,12 @@ class JustifyService {
             }
 
             // When Line is less than 80 characters
-            if (line.length + word.length < 80) {
+            if (line.length + word.length < FINAL_LINE_LENGTH) {
                 line += word + ' ';
                 textArray.shift();
 
             // When Line is equal 80 characters
-            } else if (line.length + word.length === 80) {
+            } else if (line.length + word.length === FINAL_LINE_LENGTH) {
                 line += word;
                 textArray.shift();
                 justifiedText += line + '\n';
@@ -51,7 +53,7 @@ class JustifyService {
 
 // Calculate the remaining space in a specified line and fill it with spaces to reach 80 characters line long.
 const addSpacesToJustify = (line: string) => {
-    let remainingSpace = 80 - line.length;
+    let remainingSpace = FINAL_LINE_LENGTH - line.length;
     let lineArray = line.split('');
 
     while (remainingSpace >= 0) {

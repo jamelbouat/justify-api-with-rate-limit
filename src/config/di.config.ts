@@ -1,12 +1,12 @@
 import * as awilix from 'awilix';
 
 import DBClient from './db.config';
-import TokenController from '../controllers/TokenController';
-import JustifyController from '../controllers/JustifyController';
-import TokenService from '../services/TokenService';
-import TokenValidationMiddleware from '../middlewares/TokenValidationMiddleware';
-import JustifyService from '../services/JustifyService';
-import RateLimitMiddleware from '../middlewares/RateLimitMiddleware';
+import TokenController from '../lib/controllers/TokenController';
+import JustifyController from '../lib/controllers/JustifyController';
+import TokenService from '../lib/services/TokenService';
+import TokenValidationMiddleware from '../lib/middlewares/TokenValidationMiddleware';
+import JustifyService from '../lib/services/JustifyService';
+import RateLimitMiddleware from '../lib/middlewares/RateLimitMiddleware';
 
 const container = awilix.createContainer({
     injectionMode: awilix.InjectionMode.PROXY

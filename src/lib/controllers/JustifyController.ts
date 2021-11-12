@@ -2,7 +2,7 @@ import { Router, Request, Response, NextFunction } from 'express';
 import bodyParser from 'body-parser';
 
 import { IController } from '../interfaces/controllers';
-import { JUSTIFY_URL } from '../config/url.config';
+import { JUSTIFY_URL } from '../../config/url.config';
 import JustifyService from '../services/JustifyService';
 
 class JustifyController implements IController {

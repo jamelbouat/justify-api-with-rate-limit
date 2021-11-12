@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response, Router } from 'express';
 import bodyParser from 'body-parser';
 
-import { TOKEN_URL } from '../config/url.config';
+import { TOKEN_URL } from '../../config/url.config';
 import { IController } from '../interfaces/controllers';
 import AccessForbiddenError from '../errors/AccessForbiddenError';
 import TokenService from '../services/TokenService';

@@ -2,9 +2,9 @@ import express, { Application } from 'express';
 import cors from 'cors';
 
 import DBClient from '../config/db.config';
-import { IController } from '../interfaces/controllers';
+import { IController } from './interfaces/controllers';
 import Constants from './constants/constants';
-import errorHandlerMiddleware from '../middlewares/errorHandlerMiddleware';
+import errorHandlerMiddleware from './middlewares/errorHandlerMiddleware';
 
 class App {
     private app: Application;
